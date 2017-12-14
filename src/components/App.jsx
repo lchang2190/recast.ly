@@ -5,10 +5,18 @@ class App extends React.Component {
       videoList: window.exampleVideoData,
       currentVideo: window.exampleVideoData[0]
     };
+    
+    window.searchYouTube({query: 'cats'}, this.updateVideo.bind(this));
   }
   changeVideo(props) {
     this.setState({
       currentVideo: props
+    });
+  }
+  updateVideo(data) {
+    this.setState({
+      videoList: data,
+      currentVideo: data[0]
     });
   }
   render() {
