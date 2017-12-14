@@ -1,12 +1,9 @@
 var searchYouTube = (options, callback) => {
-  
-  
-  
   $.ajax({
      // cache: false,
     data: {
       key: YOUTUBE_API_KEY,
-      q: 'cats',
+      q: options.query,
       part: 'snippet',
       maxResults: 10,
       type: 'video',
@@ -19,13 +16,8 @@ var searchYouTube = (options, callback) => {
     success: function(data) {
       var results = data.items;
       callback(results);
-
     }
   });
-
-  
-
-  
 };
 
 window.searchYouTube = searchYouTube;

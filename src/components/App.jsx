@@ -5,8 +5,9 @@ class App extends React.Component {
       videoList: window.exampleVideoData,
       currentVideo: window.exampleVideoData[0]
     };
-    
-    window.searchYouTube({query: 'cats'}, this.updateVideo.bind(this));
+  }
+  componentDidMount() {
+    window.searchYouTube({query: 'warriors'}, this.updateVideo.bind(this));
   }
   changeVideo(props) {
     this.setState({
@@ -19,12 +20,15 @@ class App extends React.Component {
       currentVideo: data[0]
     });
   }
+  search(input) {
+    window.searchYouTube({query: input}, this.updateVideo.bind(this));
+  }
   render() {
     return (
       <div>
         <nav className="navbar">
           <div className="col-md-6 offset-md-3">
-            <Search />
+            <Search searchCB={this.search.bind(this)} />
           </div>
         </nav> 
         <div className="row">
