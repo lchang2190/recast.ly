@@ -5,7 +5,7 @@ var searchYouTube = (options, callback) => {
       key: YOUTUBE_API_KEY,
       q: options.query,
       part: 'snippet',
-      maxResults: 10,
+      maxResults: 8,
       type: 'video',
       videoEmbeddable: true
     },

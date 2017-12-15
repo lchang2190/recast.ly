@@ -4,7 +4,7 @@ var Search = (props) => {
   };
   
   var liveSearch = () => {
-    _.debounce(props.searchCB(document.getElementById('inputBox').value), 2000);
+    _.debounce(props.searchCB(document.getElementById('inputBox').value), 10000);
   };
 
   return (
