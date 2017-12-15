@@ -4,7 +4,8 @@ var VideoPlayer = (props) => (
       <iframe className="embed-responsive-item" src={'https://www.youtube.com/embed/' + props.video.id.videoId} allowFullScreen></iframe>
     </div>
     <div className="video-player-details">
-      <h3>{props.video.snippet.title}</h3>
+      <h3 className="title"><a className="titleLink" href={'https://www.youtube.com/embed/' + props.video.id.videoId} target="_blank">{props.video.snippet.title}</a></h3>
+      <h3 className="channel"><a className="channelLink" href={'https://www.youtube.com/channel/' + props.video.snippet.channelId} target="_blank">{props.video.snippet.channelTitle}</a></h3>
       <div>{props.video.snippet.description}</div>
     </div>
   </div>

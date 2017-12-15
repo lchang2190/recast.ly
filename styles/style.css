@@ -6,8 +6,17 @@ font-family: Montserrat;
 /*font-weight: 700;*/
 }
 
+a {
+  color: #045FB4;
+}
+
 a:hover {
   color: #01A9DB;
+  text-decoration: none;
+}
+
+.channelLink {
+  color: #2E2E2E;
 }
 
 .navbar {
@@ -49,7 +58,8 @@ border-width: 2px;
 }
 
 .video-player {
-  margin-left: 20px;
+  margin-top: 5px;
+  margin-left: 25px;
 }
 
 .video-player-details {
@@ -60,7 +70,7 @@ border-width: 2px;
   padding-bottom: 14px;
   border: 0;
   box-shadow: 0 1px 2px rgba(0,0,0,.1);
-  margin-top: 10px;
+  margin-top: 25px;
   border-radius: 10px;
 }
 
@@ -70,13 +80,19 @@ border-width: 2px;
   font-size: 22.5px;
 }
 
+.video-player-details .channel {
+  color: #424242;
+  font-size: 18.5px;
+}
 
 .video-list {
   background: #fff;
-  padding: 15px;
+  padding-left: 22.5px;
+  padding-right: 22.5px;
   border: 0;
   box-shadow: 0 1px 2px rgba(0,0,0,.1);
   margin-right: 20px;
+  margin-top: 6px;
   border-radius: 10px;
 }
 
